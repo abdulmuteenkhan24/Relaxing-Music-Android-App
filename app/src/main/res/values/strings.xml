@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Relaxing Music</string>
+    <string name="albums_name">Music</string>
+    <string name="APP_AD_id">ca-app-pub-9736454690853453~4526090873</string>
+    <string name="banner_AD_id">ca-app-pub-9736454690853453/4853124437</string>
+    <string name="InterstitialAd_id">ca-app-pub-9736454690853453/5207105356</string>
+    <string name="Rewarded_Ad_id">ca-app-pub-9736454690853453/4137835768</string>
+    <string name="title_home">Music</string>
+    <string name="title_dashboard">Video</string>
+    <string name="title_notifications">Settings</string>
+    <string name="placeholder_song_time">01:36</string>
+    <string name="placeholder_song_title">Rainforest Rain Sound</string>
+    <string name="placeholder_song_counts">161 songs</string>
+    <string name="placeholder_current_song_slash_song_count">2 / 161</string>
+    <string name="internet_error">You are Offline Please Connect to Internet!</string>
+</resources>

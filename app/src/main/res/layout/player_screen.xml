@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingStart="2dp"
+    android:background="@drawable/background"
+    android:paddingEnd="2dp">
+
+    <RelativeLayout
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seperator"
+        android:background="@color/black"
+        android:layout_alignParentTop="true">
+
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/arg_music_panel_layout"
+        android:background="#000"
+        android:tint="?android:attr/colorControlNormal" />
+    <RelativeLayout
+
+        android:id="@+id/arg_music_panel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layControls"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAudioName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingStart="45dp"
+            android:paddingEnd="45dp"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAudioName"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-53dp"
+            android:src="@drawable/timer" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnFullscreen"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="#00ffffff"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/full"
+            android:tint="?android:attr/colorControlNormal" />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layControls"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="219dp"
+                android:layout_height="81dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/arg_pause"
+                android:tint="?android:attr/colorControlNormal" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnRepeat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12.5dp"
+            android:background="#00ffffff"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/arg_repeat"
+            android:layout_alignParentEnd="true"
+            android:tint="?android:attr/colorControlNormal" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
