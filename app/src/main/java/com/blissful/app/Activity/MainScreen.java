@@ -19,7 +19,6 @@ import android.widget.CompoundButton;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -28,7 +27,6 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import com.blissful.app.Adapter.Albums_Adapter;
 import com.blissful.app.BuildConfig;
 import com.blissful.app.DB.SQLDatabase;
@@ -37,8 +35,6 @@ import com.blissful.app.R;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
-
-
 import java.util.ArrayList;
 
 public class MainScreen extends AppCompatActivity {
@@ -47,8 +43,6 @@ public class MainScreen extends AppCompatActivity {
     ActionBarDrawerToggle t;
     Context context = this;
     GridView coursesGV;
-
-
     Dialog dialog;
     String name;
     String image;
@@ -62,8 +56,8 @@ public class MainScreen extends AppCompatActivity {
         mydb = new SQLDatabase(this);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refreshLayout);
-
         dialog = ProgressDialog.show(MainScreen.this, "", "Loading...", true, false);
+        
         // Refresh  the layout
         swipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
@@ -81,6 +75,7 @@ public class MainScreen extends AppCompatActivity {
                 SetAdapter();
             }
         }, 1000);
+        
         ImageView openView = findViewById(R.id.imageButton);
         openView.setOnClickListener(new View.OnClickListener() {
             @Override
